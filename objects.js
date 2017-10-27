@@ -5,9 +5,9 @@ var playObj={
 var playlist=Object.assign({},playObj);
 
 function updatePlaylist(obj,nam,song){
-  return Object.assign({},obj,{nam:song});
+  return Object.assign({},obj,{[nam:song]});
 }
 function removeFromPlaylist(obj, nam){
-  delete nam;
+  delete obj[nam];
   return obj;
 }
